@@ -64,9 +64,24 @@ function find_all( $table )
  * Preencha as funções abaixo;
 */
 
-function save($table = null, $data = null) 
+function save($name,$cnpj_cpf,$birthdate,$phone,$address,$zip_code,$city,$state) 
 {
-    // stuff
+    
+    $database = open_database();
+    $found = null;
+    try {
+        $sql = "INSERT INTO ". $table . " (name,cpf_cnpj,birthdate,address,zipcode,city,state,phone) VALUES ('$name','$cnpj_cpf','$birthdate',$phone,'$address','$zip_code','$city','$state')";
+        echo $sql;
+        $database->query($sql);
+        }
+     catch (Exception $e) {
+        $_SESSION['message'] = $e->GetMessage();
+        $_SESSION['type'] = 'danger';
+    }
+
+    close_database($database);
+    
+    return $found;
 }
 
 function update($table = null, $id = 0, $data = null) 

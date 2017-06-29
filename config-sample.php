@@ -1,8 +1,8 @@
 <?php
 
-define('DB_NAME', 'teste_crud');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'eagle123');
+define('DB_NAME', 'eagle_user');
+define('DB_USER', 'eagle_user');
+define('DB_PASSWORD', 'eagle_user');
 define('DB_HOST', 'localhost');
 
 define('NOME_DO_CANDIDATO', 'Seu Nome');

@@ -22,7 +22,7 @@ function add()
 {
     if (!empty($_POST['customer'])) {
         $customer = $_POST['customer'];
-        save('customers', $customer);
+        //save('customers', $customer);
         header('location: index.php');
     }
 }

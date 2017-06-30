@@ -70,8 +70,9 @@ function save($name,$cnpj_cpf,$birthdate,$phone,$address,$zip_code,$city,$state)
     $database = open_database();
     $found = null;
     try {
-        $sql = "INSERT INTO ". $table . " (name,cpf_cnpj,birthdate,address,zipcode,city,state,phone) VALUES ('$name','$cnpj_cpf','$birthdate',$phone,'$address','$zip_code','$city','$state')";
+        $sql = "INSERT INTO customers (name,cpf_cnpj,birthdate,phone,address,zip_code,city,state) VALUES ('$name','$cnpj_cpf','$birthdate',$phone,'$address',$zip_code,'$city','$state');";
         echo $sql;
+        
         $database->query($sql);
         }
      catch (Exception $e) {

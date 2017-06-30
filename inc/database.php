@@ -124,7 +124,7 @@ function update($table = null, $id = 0, $data = null)
         $dataCompleta = $ano."-".$mes."-".$dia;
         
         //print_r($data);
-        $sql = "UPDATE customer SET name= '".$data["'name'"]."',cpf_cnpj= '".$data["'cpf_cnpj'"]."',birthdate= '".$dataCompleta."',"
+        $sql = "UPDATE $table SET name= '".$data["'name'"]."',cpf_cnpj= '".$data["'cpf_cnpj'"]."',birthdate= '".$dataCompleta."',"
                 . "phone= ".$data["'phone'"].",address= '".$data["'address'"]."',zip_code= ".$data["'zip_code'"].",city= '".$data["'city'"]."',state= '".$data["'state'"]."'"
                 . " WHERE id = $id;";
         echo $sql;

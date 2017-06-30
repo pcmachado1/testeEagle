@@ -22,7 +22,15 @@
 
     <div class="form-group col-md-2">
       <label for="campo3">Data de Nascimento</label>
-      <input type="text" class="form-control" name="customer['birthdate']" value="<?php echo $customer['birthdate']; ?>">
+      <input type="text" class="form-control" name="customer['birthdate']" value="<?php 
+                                                                            $data = str_split($customer['birthdate']);
+                                                                              //print_r($data);
+                                                                              $dia = $data[8].$data[9];
+                                                                              $mes = $data[5].$data[6];
+                                                                              $ano = $data[0].$data[1].$data[2].$data[3];
+                                                                              $dataCompleta = $dia."/".$mes."/".$ano;
+
+                                                                            echo $dataCompleta; ?>">
     </div>
     <div class="form-group col-md-2">
       <label for="campo2">Telefone</label>

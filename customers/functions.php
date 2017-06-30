@@ -22,7 +22,8 @@ function add()
 {
     if (!empty($_POST['customer'])) {
         $customer = $_POST['customer'];
-        //save('customers', $customer);
+        //var_dump($customer);
+        save('customers', $customer);
         header('location: index.php');
     }
 }
@@ -35,7 +36,7 @@ function edit()
         if (isset($_POST['customer'])) {
             $customer = $_POST['customer'];
             update('customers', $id, $customer);
-            header('location: index.php');
+            //header('location: index.php');
         } else {
             global $customer;
             $customer = find('customers', $id);

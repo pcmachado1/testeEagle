@@ -1,10 +1,8 @@
 <?php 
-require_once('../config.php');
-require_once(DBAPI);
 
 
-    //require_once('functions.php'); 
-    //add();
+    require_once('functions.php'); 
+    add();
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
@@ -19,21 +17,25 @@ require_once(DBAPI);
     <div class="form-group col-md-5">
       <label for="name">Nome / Razão Social</label>
       <input type="text" class="form-control" id="name" name="customer['name']">
+      <span id="errorName"></span>
     </div>
 
     <div class="form-group col-md-3">
       <label for="cnpj_cpf">CNPJ / CPF</label>
       <input type="text" id="cnpj_cpf" class="form-control" name="customer['cpf_cnpj']">
+      <span id="errorCpf"></span>
     </div>
 
     <div class="form-group col-md-2">
       <label for="birthdate">Data de Nascimento</label>
       <input type="text" id="birthdate" class="form-control" name="customer['birthdate']">
+      <span id="errorDate"></span>   
     </div>
 
     <div class="form-group col-md-2">
       <label for="phone">Telefone</label>
       <input type="text" id="phone" class="form-control" name="customer['phone']">
+      <span id="errorPhone"></span>
     </div>
 
   </div>
@@ -42,21 +44,25 @@ require_once(DBAPI);
     <div class="form-group col-md-5">
       <label for="address">Endereço</label>
       <input type="text" id="address" class="form-control" name="customer['address']">
+      <span id="errorAddress"></span> 
     </div>
     
     <div class="form-group col-md-2">
       <label for="zip_code">CEP</label>
       <input type="text" id="zip_code" class="form-control" name="customer['zip_code']">
+      <span id="errorZip"></span>
     </div>
   
     <div class="form-group col-md-3">
       <label for="city">Cidade</label>
       <input type="text" id="city" class="form-control" name="customer['city']">
+      <span id="errorCity"></span>
     </div>
 
     <div class="form-group col-md-2">
       <label for="state">Estado</label>
       <input type="text" id="state" class="form-control" name="customer['state']">
+      <span id="errorState"></span> 
     </div>
     </div>
     

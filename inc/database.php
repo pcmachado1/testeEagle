@@ -141,5 +141,14 @@ function update($table = null, $id = 0, $data = null)
 
 function remove( $table = null, $id = null ) 
 {
-    // stuff    
+    $database = open_database();
+    try {
+        $sql = "DELETE FROM $table WHERE id = $id ;";
+        //echo $sql;
+        $database->query($sql);
+    } catch (Exception $e) {
+        $_SESSION['message'] = $e->GetMessage();
+        $_SESSION['type'] = 'danger';
+    }
+    close_database($database);
 }

@@ -36,7 +36,7 @@ function edit()
         if (isset($_POST['customer'])) {
             $customer = $_POST['customer'];
             update('customers', $id, $customer);
-            //header('location: index.php');
+            header('location: index.php');
         } else {
             global $customer;
             $customer = find('customers', $id);

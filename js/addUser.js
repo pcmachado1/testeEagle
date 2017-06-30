@@ -3,12 +3,10 @@ $(document).ready(function(){
         $('#cnpj_cpf').mask('000.000.000-00');
         $('#birthdate').mask('00/00/0000');
         $('#phone').mask('00000000');
-        $('#zip_code').mask('00000000');
+        $('#zip_code').mask('000000000');
     
     //
-    $('body').on('change', '#btnAdd', function() {
-      console.log('hahaha');
-    });
+    
     $("input:text").change(function(){
         var name = $("#name").val();
         var cnpj_cpf = $("#cnpj_cpf").val();
